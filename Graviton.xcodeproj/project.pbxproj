@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B8E025B419DA0ACC0058098F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025B319DA0ACC0058098F /* AppDelegate.swift */; };
+		B8E025B619DA0ACC0058098F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025B519DA0ACC0058098F /* GameScene.swift */; };
+		B8E025B819DA0ACC0058098F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8E025B719DA0ACC0058098F /* GameScene.sks */; };
+		B8E025BA19DA0ACC0058098F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E025B919DA0ACC0058098F /* Images.xcassets */; };
+		B8E025BD19DA0ACC0058098F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E025BB19DA0ACC0058098F /* MainMenu.xib */; };
+		B8E025C919DA0ACC0058098F /* GravitonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025C819DA0ACC0058098F /* GravitonTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8E025C319DA0ACC0058098F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8E025A619DA0ACC0058098F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8E025AD19DA0ACC0058098F;
+			remoteInfo = Graviton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B8E025AE19DA0ACC0058098F /* Graviton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graviton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E025B219DA0ACC0058098F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E025B319DA0ACC0058098F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8E025B519DA0ACC0058098F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B8E025B719DA0ACC0058098F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B8E025B919DA0ACC0058098F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B8E025BC19DA0ACC0058098F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B8E025C219DA0ACC0058098F /* GravitonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GravitonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E025C719DA0ACC0058098F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E025C819DA0ACC0058098F /* GravitonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravitonTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8E025AB19DA0ACC0058098F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E025BF19DA0ACC0058098F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B8E025A519DA0ACC0058098F = {
+			isa = PBXGroup;
+			children = (
+				B8E025B019DA0ACC0058098F /* Graviton */,
+				B8E025C519DA0ACC0058098F /* GravitonTests */,
+				B8E025AF19DA0ACC0058098F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8E025AF19DA0ACC0058098F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8E025AE19DA0ACC0058098F /* Graviton.app */,
+				B8E025C219DA0ACC0058098F /* GravitonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8E025B019DA0ACC0058098F /* Graviton */ = {
+			isa = PBXGroup;
+			children = (
+				B8E025B319DA0ACC0058098F /* AppDelegate.swift */,
+				B8E025B519DA0ACC0058098F /* GameScene.swift */,
+				B8E025B719DA0ACC0058098F /* GameScene.sks */,
+				B8E025B919DA0ACC0058098F /* Images.xcassets */,
+				B8E025BB19DA0ACC0058098F /* MainMenu.xib */,
+				B8E025B119DA0ACC0058098F /* Supporting Files */,
+			);
+			path = Graviton;
+			sourceTree = "<group>";
+		};
+		B8E025B119DA0ACC0058098F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8E025B219DA0ACC0058098F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8E025C519DA0ACC0058098F /* GravitonTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8E025C819DA0ACC0058098F /* GravitonTests.swift */,
+				B8E025C619DA0ACC0058098F /* Supporting Files */,
+			);
+			path = GravitonTests;
+			sourceTree = "<group>";
+		};
+		B8E025C619DA0ACC0058098F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8E025C719DA0ACC0058098F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8E025AD19DA0ACC0058098F /* Graviton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E025CC19DA0ACC0058098F /* Build configuration list for PBXNativeTarget "Graviton" */;
+			buildPhases = (
+				B8E025AA19DA0ACC0058098F /* Sources */,
+				B8E025AB19DA0ACC0058098F /* Frameworks */,
+				B8E025AC19DA0ACC0058098F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Graviton;
+			productName = Graviton;
+			productReference = B8E025AE19DA0ACC0058098F /* Graviton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8E025C119DA0ACC0058098F /* GravitonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E025CF19DA0ACC0058098F /* Build configuration list for PBXNativeTarget "GravitonTests" */;
+			buildPhases = (
+				B8E025BE19DA0ACC0058098F /* Sources */,
+				B8E025BF19DA0ACC0058098F /* Frameworks */,
+				B8E025C019DA0ACC0058098F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8E025C419DA0ACC0058098F /* PBXTargetDependency */,
+			);
+			name = GravitonTests;
+			productName = GravitonTests;
+			productReference = B8E025C219DA0ACC0058098F /* GravitonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8E025A619DA0ACC0058098F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Karl Johan Krantz";
+				TargetAttributes = {
+					B8E025AD19DA0ACC0058098F = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B8E025C119DA0ACC0058098F = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = B8E025AD19DA0ACC0058098F;
+					};
+				};
+			};
+			buildConfigurationList = B8E025A919DA0ACC0058098F /* Build configuration list for PBXProject "Graviton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8E025A519DA0ACC0058098F;
+			productRefGroup = B8E025AF19DA0ACC0058098F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8E025AD19DA0ACC0058098F /* Graviton */,
+				B8E025C119DA0ACC0058098F /* GravitonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8E025AC19DA0ACC0058098F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E025B819DA0ACC0058098F /* GameScene.sks in Resources */,
+				B8E025BA19DA0ACC0058098F /* Images.xcassets in Resources */,
+				B8E025BD19DA0ACC0058098F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E025C019DA0ACC0058098F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8E025AA19DA0ACC0058098F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E025B619DA0ACC0058098F /* GameScene.swift in Sources */,
+				B8E025B419DA0ACC0058098F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E025BE19DA0ACC0058098F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E025C919DA0ACC0058098F /* GravitonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8E025C419DA0ACC0058098F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8E025AD19DA0ACC0058098F /* Graviton */;
+			targetProxy = B8E025C319DA0ACC0058098F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B8E025BB19DA0ACC0058098F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8E025BC19DA0ACC0058098F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8E025CA19DA0ACC0058098F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8E025CB19DA0ACC0058098F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B8E025CD19DA0ACC0058098F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Graviton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B8E025CE19DA0ACC0058098F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Graviton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B8E025D019DA0ACC0058098F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GravitonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Graviton.app/Contents/MacOS/Graviton";
+			};
+			name = Debug;
+		};
+		B8E025D119DA0ACC0058098F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GravitonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Graviton.app/Contents/MacOS/Graviton";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8E025A919DA0ACC0058098F /* Build configuration list for PBXProject "Graviton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E025CA19DA0ACC0058098F /* Debug */,
+				B8E025CB19DA0ACC0058098F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8E025CC19DA0ACC0058098F /* Build configuration list for PBXNativeTarget "Graviton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E025CD19DA0ACC0058098F /* Debug */,
+				B8E025CE19DA0ACC0058098F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B8E025CF19DA0ACC0058098F /* Build configuration list for PBXNativeTarget "GravitonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E025D019DA0ACC0058098F /* Debug */,
+				B8E025D119DA0ACC0058098F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8E025A619DA0ACC0058098F /* Project object */;
+}
