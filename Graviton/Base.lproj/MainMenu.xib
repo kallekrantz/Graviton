@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6233" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6246" systemVersion="14A329r" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6233"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6246"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -104,13 +104,13 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="800" height="600"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="539" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                    <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="539" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="793" height="500"/>
                     </customView>
                 </subviews>
                 <constraints>
@@ -120,8 +120,9 @@
                     <constraint firstItem="539" firstAttribute="leading" secondItem="372" secondAttribute="leading" id="544"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="520" y="417"/>
         </window>
-        <customObject id="494" customClass="AppDelegate" customModuleProvider="target">
+        <customObject id="494" customClass="AppDelegate" customModule="Graviton" customModuleProvider="target">
             <connections>
                 <outlet property="skView" destination="539" id="540"/>
                 <outlet property="window" destination="371" id="532"/>

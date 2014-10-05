@@ -7,12 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83A4C2B19E03BC0008E7BBD /* RadialGravityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A4C2A19E03BC0008E7BBD /* RadialGravityNode.swift */; };
+		B83A4C2D19E0477C008E7BBD /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A4C2C19E0477C008E7BBD /* SpringNode.swift */; };
+		B83A4C2F19E04831008E7BBD /* DragNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A4C2E19E04831008E7BBD /* DragNode.swift */; };
+		B83A4C3419E0786D008E7BBD /* repulsorShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B83A4C3319E0786D008E7BBD /* repulsorShader.fsh */; };
+		B83A4C3619E14AD1008E7BBD /* springShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B83A4C3519E14AD1008E7BBD /* springShader.fsh */; };
+		B83A4C3819E153B2008E7BBD /* dragShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B83A4C3719E153B2008E7BBD /* dragShader.fsh */; };
+		B8830FD119DAE1B0003C338F /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8830FD019DAE1B0003C338F /* Level.swift */; };
+		B8830FD719DAE7BD003C338F /* BasicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8830FD619DAE7BD003C338F /* BasicTest.swift */; };
+		B8830FD919DAEE9B003C338F /* SKNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8830FD819DAEE9B003C338F /* SKNodeExtension.swift */; };
 		B8E025B419DA0ACC0058098F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025B319DA0ACC0058098F /* AppDelegate.swift */; };
 		B8E025B619DA0ACC0058098F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025B519DA0ACC0058098F /* GameScene.swift */; };
 		B8E025B819DA0ACC0058098F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8E025B719DA0ACC0058098F /* GameScene.sks */; };
 		B8E025BA19DA0ACC0058098F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E025B919DA0ACC0058098F /* Images.xcassets */; };
 		B8E025BD19DA0ACC0058098F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E025BB19DA0ACC0058098F /* MainMenu.xib */; };
 		B8E025C919DA0ACC0058098F /* GravitonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025C819DA0ACC0058098F /* GravitonTests.swift */; };
+		B8E025DD19DA0B0B0058098F /* FieldWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E025D419DA0B0B0058098F /* FieldWrapper.m */; };
+		B8E025DE19DA0B0B0058098F /* FieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025D519DA0B0B0058098F /* FieldNode.swift */; };
+		B8E025DF19DA0B0B0058098F /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025D619DA0B0B0058098F /* CGPointExtension.swift */; };
+		B8E025E019DA0B0B0058098F /* SKShapeNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025D719DA0B0B0058098F /* SKShapeNodeExtension.swift */; };
+		B8E025E119DA0B0B0058098F /* CGVectorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025D819DA0B0B0058098F /* CGVectorExtensions.swift */; };
+		B8E025E219DA0B0B0058098F /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025D919DA0B0B0058098F /* CharacterExtension.swift */; };
+		B8E025E319DA0B0B0058098F /* EventExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025DA19DA0B0B0058098F /* EventExtension.swift */; };
+		B8E025E419DA0B0B0058098F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025DB19DA0B0B0058098F /* Enums.swift */; };
+		B8E025E519DA0B0B0058098F /* InputExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E025DC19DA0B0B0058098F /* InputExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B83A4C2A19E03BC0008E7BBD /* RadialGravityNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGravityNode.swift; sourceTree = "<group>"; };
+		B83A4C2C19E0477C008E7BBD /* SpringNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
+		B83A4C2E19E04831008E7BBD /* DragNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragNode.swift; sourceTree = "<group>"; };
+		B83A4C3319E0786D008E7BBD /* repulsorShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = repulsorShader.fsh; sourceTree = "<group>"; };
+		B83A4C3519E14AD1008E7BBD /* springShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = springShader.fsh; sourceTree = "<group>"; };
+		B83A4C3719E153B2008E7BBD /* dragShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = dragShader.fsh; sourceTree = "<group>"; };
+		B8830FD019DAE1B0003C338F /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		B8830FD619DAE7BD003C338F /* BasicTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTest.swift; sourceTree = "<group>"; };
+		B8830FD819DAEE9B003C338F /* SKNodeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNodeExtension.swift; sourceTree = "<group>"; };
 		B8E025AE19DA0ACC0058098F /* Graviton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graviton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E025B219DA0ACC0058098F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8E025B319DA0ACC0058098F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +63,17 @@
 		B8E025C219DA0ACC0058098F /* GravitonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GravitonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E025C719DA0ACC0058098F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8E025C819DA0ACC0058098F /* GravitonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravitonTests.swift; sourceTree = "<group>"; };
+		B8E025D219DA0B0B0058098F /* Graviton-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Graviton-Bridging-Header.h"; sourceTree = "<group>"; };
+		B8E025D319DA0B0B0058098F /* FieldWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FieldWrapper.h; path = ../../Fielder/Fielder/FieldWrapper.h; sourceTree = "<group>"; };
+		B8E025D419DA0B0B0058098F /* FieldWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FieldWrapper.m; path = ../../Fielder/Fielder/FieldWrapper.m; sourceTree = "<group>"; };
+		B8E025D519DA0B0B0058098F /* FieldNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldNode.swift; path = ../../Fielder/Fielder/FieldNode.swift; sourceTree = "<group>"; };
+		B8E025D619DA0B0B0058098F /* CGPointExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGPointExtension.swift; path = ../../Fielder/Fielder/CGPointExtension.swift; sourceTree = "<group>"; };
+		B8E025D719DA0B0B0058098F /* SKShapeNodeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SKShapeNodeExtension.swift; path = ../../Fielder/Fielder/SKShapeNodeExtension.swift; sourceTree = "<group>"; };
+		B8E025D819DA0B0B0058098F /* CGVectorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGVectorExtensions.swift; path = ../../Fielder/Fielder/CGVectorExtensions.swift; sourceTree = "<group>"; };
+		B8E025D919DA0B0B0058098F /* CharacterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterExtension.swift; path = ../../Fielder/Fielder/CharacterExtension.swift; sourceTree = "<group>"; };
+		B8E025DA19DA0B0B0058098F /* EventExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventExtension.swift; path = ../../Fielder/Fielder/EventExtension.swift; sourceTree = "<group>"; };
+		B8E025DB19DA0B0B0058098F /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = ../../Fielder/Fielder/Enums.swift; sourceTree = "<group>"; };
+		B8E025DC19DA0B0B0058098F /* InputExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputExtension.swift; path = ../../Fielder/Fielder/InputExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +94,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B83A4C2919E03A74008E7BBD /* FieldNodes */ = {
+			isa = PBXGroup;
+			children = (
+				B83A4C2A19E03BC0008E7BBD /* RadialGravityNode.swift */,
+				B83A4C2C19E0477C008E7BBD /* SpringNode.swift */,
+				B83A4C2E19E04831008E7BBD /* DragNode.swift */,
+			);
+			name = FieldNodes;
+			sourceTree = "<group>";
+		};
+		B83A4C3219E07828008E7BBD /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				B83A4C3319E0786D008E7BBD /* repulsorShader.fsh */,
+				B83A4C3519E14AD1008E7BBD /* springShader.fsh */,
+				B83A4C3719E153B2008E7BBD /* dragShader.fsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		B8830FCE19DAE188003C338F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B8830FD019DAE1B0003C338F /* Level.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B8830FCF19DAE193003C338F /* Objective C */ = {
+			isa = PBXGroup;
+			children = (
+				B8E025D319DA0B0B0058098F /* FieldWrapper.h */,
+				B8E025D419DA0B0B0058098F /* FieldWrapper.m */,
+				B8E025D219DA0B0B0058098F /* Graviton-Bridging-Header.h */,
+			);
+			name = "Objective C";
+			sourceTree = "<group>";
+		};
+		B8830FD219DAE4C3003C338F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8E025DC19DA0B0B0058098F /* InputExtension.swift */,
+				B8E025D619DA0B0B0058098F /* CGPointExtension.swift */,
+				B8E025D719DA0B0B0058098F /* SKShapeNodeExtension.swift */,
+				B8E025D819DA0B0B0058098F /* CGVectorExtensions.swift */,
+				B8E025D919DA0B0B0058098F /* CharacterExtension.swift */,
+				B8E025DA19DA0B0B0058098F /* EventExtension.swift */,
+				B8830FD819DAEE9B003C338F /* SKNodeExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		B8830FD419DAE6FA003C338F /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				B8830FD519DAE78B003C338F /* TestLevels */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		B8830FD519DAE78B003C338F /* TestLevels */ = {
+			isa = PBXGroup;
+			children = (
+				B8830FD619DAE7BD003C338F /* BasicTest.swift */,
+			);
+			name = TestLevels;
+			sourceTree = "<group>";
+		};
+		B8BBB90319E016440053B3F7 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				B83A4C2919E03A74008E7BBD /* FieldNodes */,
+				B8E025D519DA0B0B0058098F /* FieldNode.swift */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
 		B8E025A519DA0ACC0058098F = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +192,13 @@
 		B8E025B019DA0ACC0058098F /* Graviton */ = {
 			isa = PBXGroup;
 			children = (
+				B83A4C3219E07828008E7BBD /* Shaders */,
+				B8BBB90319E016440053B3F7 /* Nodes */,
+				B8830FD419DAE6FA003C338F /* Levels */,
+				B8830FD219DAE4C3003C338F /* Extensions */,
+				B8830FCF19DAE193003C338F /* Objective C */,
+				B8830FCE19DAE188003C338F /* Protocols */,
+				B8E025DB19DA0B0B0058098F /* Enums.swift */,
 				B8E025B319DA0ACC0058098F /* AppDelegate.swift */,
 				B8E025B519DA0ACC0058098F /* GameScene.swift */,
 				B8E025B719DA0ACC0058098F /* GameScene.sks */,
@@ -192,9 +314,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83A4C3619E14AD1008E7BBD /* springShader.fsh in Resources */,
 				B8E025B819DA0ACC0058098F /* GameScene.sks in Resources */,
 				B8E025BA19DA0ACC0058098F /* Images.xcassets in Resources */,
 				B8E025BD19DA0ACC0058098F /* MainMenu.xib in Resources */,
+				B83A4C3819E153B2008E7BBD /* dragShader.fsh in Resources */,
+				B83A4C3419E0786D008E7BBD /* repulsorShader.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +337,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83A4C2B19E03BC0008E7BBD /* RadialGravityNode.swift in Sources */,
+				B83A4C2D19E0477C008E7BBD /* SpringNode.swift in Sources */,
+				B8E025E419DA0B0B0058098F /* Enums.swift in Sources */,
+				B8E025E119DA0B0B0058098F /* CGVectorExtensions.swift in Sources */,
+				B8E025DE19DA0B0B0058098F /* FieldNode.swift in Sources */,
+				B8830FD919DAEE9B003C338F /* SKNodeExtension.swift in Sources */,
 				B8E025B619DA0ACC0058098F /* GameScene.swift in Sources */,
+				B8E025DF19DA0B0B0058098F /* CGPointExtension.swift in Sources */,
+				B83A4C2F19E04831008E7BBD /* DragNode.swift in Sources */,
 				B8E025B419DA0ACC0058098F /* AppDelegate.swift in Sources */,
+				B8830FD119DAE1B0003C338F /* Level.swift in Sources */,
+				B8E025E319DA0B0B0058098F /* EventExtension.swift in Sources */,
+				B8830FD719DAE7BD003C338F /* BasicTest.swift in Sources */,
+				B8E025E219DA0B0B0058098F /* CharacterExtension.swift in Sources */,
+				B8E025DD19DA0B0B0058098F /* FieldWrapper.m in Sources */,
+				B8E025E019DA0B0B0058098F /* SKShapeNodeExtension.swift in Sources */,
+				B8E025E519DA0B0B0058098F /* InputExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,10 +468,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Graviton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Graviton/Graviton-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -339,10 +482,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Graviton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Graviton/Graviton-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -401,6 +546,7 @@
 				B8E025CE19DA0ACC0058098F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8E025CF19DA0ACC0058098F /* Build configuration list for PBXNativeTarget "GravitonTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +555,7 @@
 				B8E025D119DA0ACC0058098F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

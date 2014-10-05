@@ -1,40 +1,82 @@
 //
 //  GameScene.swift
-//  Graviton
+//  GravityDragger
 //
-//  Created by Karl Johan Krantz on 29/09/14.
+//  Created by Karl Johan Krantz on 28/09/14.
 //  Copyright (c) 2014 Karl Johan Krantz. All rights reserved.
 //
 
 import SpriteKit
 
 class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+    
+    var worldNode:SKNode;
+    var dragInProgress:Bool
+    var dragStartLocation:CGPoint
+    var label:SKLabelNode;
+    var selectedField:FieldTypes;
+    var victorySquare:SKNode
+    var playerBox:SKNode
+    var nodeBeingEdited:FieldNode?;
+    
+    required init!(coder aDecoder: NSCoder!) {
+        worldNode = SKNode();
+        dragInProgress = false;
+        dragStartLocation = CGPoint();
+        label = SKLabelNode();
+        selectedField = FieldTypes.gravityField
+        victorySquare = SKShapeNode()
+        playerBox = SKNode()
+        super.init(coder:aDecoder)
+        super.addChild(worldNode)
+        self.backgroundColor = SKColor.blackColor()
     }
     
-    override func mouseDown(theEvent: NSEvent) {
-        /* Called when a mouse click occurs */
+    func createLevel(level:Level){
+        victorySquare = level.createFinish(self.frame)
+        playerBox = level.createStart(self.frame)
         
-        let location = theEvent.locationInNode(self)
+        let obstacles = level.createObstacles(self.frame)
+        let fields = level.createFields(self.frame)
         
-        let sprite = SKSpriteNode(imageNamed:"Spaceship")
-        sprite.position = location;
-        sprite.setScale(0.5)
+        playerBox.physicsBody?.dynamic = false;
         
-        let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-        sprite.runAction(SKAction.repeatActionForever(action))
-        
-        self.addChild(sprite)
+        addChild(victorySquare)
+        addChild(playerBox)
+        addChilds(obstacles)
+        addChilds(fields)
+    }
+    
+    func resetLevel(level:Level){
+        playerBox.removeFromParent()
+        playerBox = level.createStart(self.frame)
+        playerBox.physicsBody?.dynamic = false;
+        addChild(playerBox)
+    }
+    
+    override func didMoveToView(view: SKView) {
+        let middleOfScreen = CGPointMake(self.frame.maxX/2, self.frame.maxX/2);
+        label = SKLabelNode(fontNamed: "Helvetica")
+        label.text = "Gravity Field"
+        label.position = middleOfScreen
+        addChild(label)
+        createLevel(BasicTest())
+    }
+    
+    func startLevel(){
+        playerBox.physicsBody?.dynamic = true;
     }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        if(playerBox.frame.intersects(victorySquare.frame)){
+            label.text = "Winning!!!";
+        }
+        
     }
+    
+    override func addChild(node: SKNode) {
+        worldNode.addChild(node)
+    }
+    
 }
