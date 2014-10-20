@@ -13,7 +13,7 @@ class LevelManager{
     var levels:[Level];
     
     init(){
-        levels = [IntroLevel(), GravityLevel(), SpringLevel(), RemoveFieldLevel(), LearnDragLevel(), CreateFieldLevel()]
+        levels = [IntroLevel(), GravityLevel(), SpringLevel(), RemoveFieldLevel(), LearnDragLevel(), CreateFieldLevel(), RadialGravityLevel()]
     }
     
     func getNextLevel() -> Level{
