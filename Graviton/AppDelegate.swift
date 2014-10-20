@@ -38,6 +38,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
+            window.acceptsMouseMovedEvents = true;
+            window.makeFirstResponder(self.skView.scene)
             
             self.skView!.presentScene(scene)
             

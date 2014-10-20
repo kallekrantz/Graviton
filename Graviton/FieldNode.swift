@@ -13,7 +13,7 @@ class FieldNode : SKNode{
     var allowEditing:Bool;
     var allowMoving:Bool;
     var fieldVisualization:SKShapeNode?;
-    
+    var beingEdited:Bool;
     class func createNode(size:CGSize, fieldType:FieldTypes) -> FieldNode{
         
         switch(fieldType){
@@ -30,6 +30,7 @@ class FieldNode : SKNode{
     init(size: CGSize, allowEditing:Bool){
         self.allowEditing = allowEditing
         self.allowMoving = allowEditing;
+        beingEdited = false;
         super.init();
     }
 
@@ -39,7 +40,9 @@ class FieldNode : SKNode{
     
     func makeEditable(){
         if(allowEditing){
-            fieldVisualization?.strokeColor = NSColor.greenColor()
+            removeHovered()
+            fieldVisualization?.strokeColor = NSColor(calibratedRed: 0, green: 1, blue: 0, alpha: 1)
+            beingEdited = true;
             if(allowMoving){
                 self.userInteractionEnabled = true
             }
@@ -48,7 +51,23 @@ class FieldNode : SKNode{
     
     func removeEditable(){
         self.userInteractionEnabled = false
-        fieldVisualization?.strokeColor = NSColor.clearColor()
+        fieldVisualization?.strokeColor = NSColor(calibratedRed: 0, green: 1, blue: 0, alpha: 0)
+        beingEdited = false;
+
+    }
+    
+    func makeHovered(){
+        if(allowEditing && !beingEdited){
+            fieldVisualization?.strokeColor = NSColor.greenColor()
+            fieldVisualization?.strokeShader = SKShader(fileNamed: "hoverShader.fsh")
+        }
+    }
+    
+    func removeHovered(){
+        if(allowEditing && !beingEdited){
+            fieldVisualization?.strokeColor = NSColor.clearColor()
+            fieldVisualization?.strokeShader = nil;
+        }
     }
     
     override func mouseDragged(theEvent: NSEvent) {

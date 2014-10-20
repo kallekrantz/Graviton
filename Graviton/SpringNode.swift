@@ -40,7 +40,7 @@ class SpringNode : FieldNode{
         fieldVisualization!.position.x += size.width/2
         fieldVisualization!.position.y += size.height/2
         fieldVisualization!.lineWidth = 8;
-        fieldVisualization!.strokeColor = NSColor.clearColor()
+        fieldVisualization?.strokeColor = NSColor(calibratedRed: 0, green: 1, blue: 0, alpha: 0)
         fieldVisualization!.addChild(fieldNode)
         fieldVisualization!.alpha = 0.2
         fieldVisualization!.name = "fieldVisualization"
@@ -50,8 +50,5 @@ class SpringNode : FieldNode{
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func removeEditable() {
     }
 }

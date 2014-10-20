@@ -14,6 +14,7 @@ class GameScene: SKScene {
     var dragInProgress:Bool;
     var dragStartLocation:CGPoint
     var selectedField:FieldTypes;
+    var hoveredNode:FieldNode?;
     var nodeBeingEdited:FieldNode?;
     var levelManager:LevelManager;
     var gameManager:GameManager;

@@ -63,7 +63,10 @@ class BasicTest : Level{
     }
 
     func isFieldAllowed(type:FieldTypes) -> Bool{
-        return false;
+        return true;
     }
     
+    func showHUD() -> Bool {
+        return true;
+    }
 }

@@ -16,7 +16,7 @@ class RemoveFieldLevel : Level{
         let maxX = frame.maxX;
         
         let label = NORLabelNode(fontNamed: "Helvetica")
-        let action = AnimatableText.animateText(4, text: "This is alarming, we can't just fall. \n The springnode is keeping us from reaching the end. \n Remove nodes by clicking them and pressing backspace.", label: label);
+        let action = AnimatableText.animateText(4, text: "The springnode is keeping us from reaching the end. \n Remove nodes by clicking them and pressing backspace.", label: label);
         label.position = CGPointMake(maxX/2, 4*maxY/5)
         label.runAction(action);
         
@@ -38,7 +38,7 @@ class RemoveFieldLevel : Level{
         return [spring]
     }
     func createStart(frame:CGRect) -> SKNode{
-        let startPosition = CGPoint(x: frame.maxX/2, y: 4*frame.maxY/5)
+        let startPosition = CGPoint(x: frame.maxX/2, y: 3*frame.maxY/5)
         let node = SKShapeNode(rectOfSize: CGSizeMake(100, 100))
         node.position = startPosition
         node.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(100, 100));
@@ -66,4 +66,7 @@ class RemoveFieldLevel : Level{
         return false;
     }
     
+    func showHUD() -> Bool {
+        return true;
+    }
 }

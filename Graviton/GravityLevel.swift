@@ -18,7 +18,7 @@ class GravityLevel : Level{
         var label = NORLabelNode(fontNamed: "Helvetica")
         var action = AnimatableText.animateText(3, text: "Help! This box with supplies need to \n reach the other side of these pipes. \n\n This SPACE looks interesting...", label: label)
         label.runAction(action);
-        label.position = CGPointMake(maxX/2, maxY/2)
+        label.position = CGPointMake(maxX/3, 4*maxY/5)
         
         var obstacles = createWalls(frame);
         obstacles.append(label);
@@ -29,7 +29,7 @@ class GravityLevel : Level{
         return []
     }
     func createStart(frame:CGRect) -> SKNode{
-        let startPosition = CGPoint(x: frame.maxX/2, y: 4*frame.maxY/5)
+        let startPosition = CGPoint(x: 2*frame.maxX/3, y: 4*frame.maxY/5)
         let node = SKShapeNode(rectOfSize: CGSizeMake(100, 100))
         node.position = startPosition
         node.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(100, 100));
@@ -40,7 +40,7 @@ class GravityLevel : Level{
     }
     func createFinish(frame:CGRect) -> SKNode{
         let victorySquare = SKShapeNode(rectOfSize: CGSizeMake(frame.maxX/5, frame.maxY/5))
-        victorySquare.position.x = frame.maxX/2
+        victorySquare.position.x = 2*frame.maxX/3
         victorySquare.position.y = frame.maxY/5
         victorySquare.fillColor = NSColor.blueColor()
         victorySquare.alpha = 0.4
@@ -54,5 +54,8 @@ class GravityLevel : Level{
     func isFieldAllowed(type: FieldTypes) -> Bool {
         return false;
     }
-
+    
+    func showHUD() -> Bool {
+        return true;
+    }
 }

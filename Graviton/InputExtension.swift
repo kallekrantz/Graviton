@@ -57,6 +57,24 @@ extension GameScene {
         }
     }
     
+    override func mouseMoved(theEvent: NSEvent) {
+        if(!gameManager.levelInProgress()){
+            let location = theEvent.locationInNode(self);
+            let node = nodeAtPoint(location).parent;
+            if let fieldNode = node as? FieldNode{
+                if(hoveredNode != fieldNode){
+                    hoveredNode?.removeHovered()
+                    fieldNode.makeHovered()
+                    hoveredNode = fieldNode;
+                }
+            }
+            else{
+                hoveredNode?.removeHovered()
+                hoveredNode = nil;
+            }
+        }
+    }
+    
     override func keyDown(theEvent: NSEvent) {
         var keyCode = theEvent.character;
         switch(keyCode){

@@ -77,4 +77,8 @@ class IntroLevel : Level{
         return false;
     }
     
+    func showHUD() -> Bool {
+        return false;
+    }
+    
 }

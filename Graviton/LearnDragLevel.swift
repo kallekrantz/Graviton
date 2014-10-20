@@ -70,4 +70,7 @@ class LearnDragLevel : Level{
         return false;
     }
     
+    func showHUD() -> Bool {
+        return true;
+    }
 }

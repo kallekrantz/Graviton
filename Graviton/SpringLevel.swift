@@ -15,7 +15,7 @@ class SpringLevel : Level{
         
         let label = NORLabelNode(fontNamed: "Helvetica")
         let action = AnimatableText.animateText(3, text: "Oh, what's this? Seems there's a \n Spring Field over the room.", label: label);
-        label.position = CGPointMake(maxX/2, maxY/2)
+        label.position = CGPointMake(maxX/2, 2*maxY/3)
         label.runAction(action);
         
         var obstacles = createWalls(frame);
@@ -55,5 +55,9 @@ class SpringLevel : Level{
     }
     func isFieldAllowed(type: FieldTypes) -> Bool {
         return false;
+    }
+    
+    func showHUD() -> Bool {
+        return true;
     }
 }

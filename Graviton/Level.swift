@@ -15,6 +15,7 @@ protocol Level{
     func createFinish(frame:CGRect) -> SKNode
     func startLevel();
     func isFieldAllowed(type:FieldTypes) -> Bool;
+    func showHUD() -> Bool;
 }
 
 func createWalls(frame:CGRect) -> [SKNode]{

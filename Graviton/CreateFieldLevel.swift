@@ -54,4 +54,8 @@ class CreateFieldLevel : Level{
     func isFieldAllowed(type: FieldTypes) -> Bool {
         return .springField == type;
     }
+    
+    func showHUD() -> Bool {
+        return true;
+    }
 }
