@@ -10,11 +10,12 @@ import Foundation
 
 class RadialGravityNode : FieldNode{
     var fieldVisualization:SKShapeNode;
-    private var allowEditing:Bool;
-
+    var allowEditing:Bool;
+    var allowMoving:Bool;
     init(size: CGSize, allowEditing:Bool) {
         let length = CGVector(dx: size.width, dy: size.height).length()/2
         self.allowEditing = allowEditing
+        self.allowMoving = allowEditing;
         self.fieldVisualization = SKShapeNode(circleOfRadius: length);
         self.fieldVisualization.position.x += size.width/2
         self.fieldVisualization.position.y += size.height/2
@@ -39,7 +40,9 @@ class RadialGravityNode : FieldNode{
     override func makeEditable() {
         if(allowEditing){
             fieldVisualization.strokeColor = NSColor.greenColor()
-            self.userInteractionEnabled = true
+            if(allowMoving){
+                self.userInteractionEnabled = true
+            }
         }
     }
     

@@ -11,66 +11,52 @@ import SpriteKit
 class GameScene: SKScene {
     
     var worldNode:SKNode;
-    var dragInProgress:Bool
+    var dragInProgress:Bool;
     var dragStartLocation:CGPoint
-    var label:SKLabelNode;
     var selectedField:FieldTypes;
-    var victorySquare:SKNode
-    var playerBox:SKNode
     var nodeBeingEdited:FieldNode?;
+    var levelManager:LevelManager;
+    var gameManager:GameManager;
+    var fieldManager:FieldManager;
     
-    required init!(coder aDecoder: NSCoder!) {
+    required init!(coder aDecoder: NSCoder) {
         worldNode = SKNode();
+        selectedField = FieldTypes.springField
+        levelManager = LevelManager()
+        gameManager = GameManager(frame: CGRect())
         dragInProgress = false;
         dragStartLocation = CGPoint();
-        label = SKLabelNode();
-        selectedField = FieldTypes.gravityField
-        victorySquare = SKShapeNode()
-        playerBox = SKNode()
+        fieldManager = FieldManager();
         super.init(coder:aDecoder)
         super.addChild(worldNode)
         self.backgroundColor = SKColor.blackColor()
     }
     
-    func createLevel(level:Level){
-        victorySquare = level.createFinish(self.frame)
-        playerBox = level.createStart(self.frame)
-        
-        let obstacles = level.createObstacles(self.frame)
-        let fields = level.createFields(self.frame)
-        
-        playerBox.physicsBody?.dynamic = false;
-        
-        addChild(victorySquare)
-        addChild(playerBox)
-        addChilds(obstacles)
-        addChilds(fields)
-    }
+
     
-    func resetLevel(level:Level){
-        playerBox.removeFromParent()
-        playerBox = level.createStart(self.frame)
-        playerBox.physicsBody?.dynamic = false;
-        addChild(playerBox)
-    }
+
     
     override func didMoveToView(view: SKView) {
-        let middleOfScreen = CGPointMake(self.frame.maxX/2, self.frame.maxX/2);
-        label = SKLabelNode(fontNamed: "Helvetica")
-        label.text = "Gravity Field"
-        label.position = middleOfScreen
-        addChild(label)
-        createLevel(BasicTest())
+        let middleOfScreen = CGPointMake(self.frame.maxX/2, self.frame.maxY/2);
+        //label.text = "Gravity Field"
+        gameManager.frame = self.frame;
+        
+
+        let levelNode = gameManager.createLevel()
+        addChild(levelNode);
+        
     }
     
     func startLevel(){
-        playerBox.physicsBody?.dynamic = true;
+        nodeBeingEdited?.removeEditable()
+        gameManager.startLevel()
     }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        if(playerBox.frame.intersects(victorySquare.frame)){
-            label.text = "Winning!!!";
+        if(gameManager.completedLevel()){
+            fieldManager.clearFields();
+            gameManager.victoryAchieved();
         }
         
     }

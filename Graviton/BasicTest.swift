@@ -9,7 +9,8 @@
 import Foundation
 
 class BasicTest : Level{
-    
+    var playerBox:SKNode?;
+    init(){}
     func createObstacles(frame:CGRect) -> [SKNode]{
         let maxY = frame.maxY;
         let maxX = frame.maxX;
@@ -56,6 +57,13 @@ class BasicTest : Level{
         victorySquare.alpha = 0.4
         return victorySquare
     }
-    
+
+    func startLevel() {
+        playerBox?.physicsBody?.dynamic = true;
+    }
+
+    func isFieldAllowed(type:FieldTypes) -> Bool{
+        return false;
+    }
     
 }

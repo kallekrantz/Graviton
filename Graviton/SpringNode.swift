@@ -20,22 +20,35 @@ import Foundation
 
 class SpringNode : FieldNode{
     var fieldVisualization:SKShapeNode;
-    private var allowEditing:Bool;
+    var fieldNode:SKFieldNode;
+    var allowEditing:Bool;
+    var allowMoving:Bool;
+    var strength:Float{
+        get{
+            return fieldNode.strength;
+        }
+        set(strength){
+            fieldNode.strength = strength;
+        }
+    }
     init(size: CGSize, allowEditing:Bool) {
         
         self.fieldVisualization = SKShapeNode(rectOfSize: size);
         self.fieldVisualization.position.x += size.width/2
         self.fieldVisualization.position.y += size.height/2
         self.allowEditing = allowEditing
+        self.allowMoving = allowEditing
+        fieldNode = SKFieldNode.springField()
+        fieldNode.region = SKRegion(size: size)
+        fieldNode.strength = 20
+        fieldNode.name = "fieldNode"
+        
         super.init();
         
         fieldVisualization.lineWidth = 8;
         fieldVisualization.strokeColor = NSColor.clearColor()
         
-        let fieldNode = SKFieldNode.springField()
-        fieldNode.region = SKRegion(size: size)
-        fieldNode.strength = 20
-        fieldNode.name = "fieldNode"
+
         
         fieldVisualization.addChild(fieldNode)
         
@@ -50,7 +63,9 @@ class SpringNode : FieldNode{
     override func makeEditable() {
         if(allowEditing){
             fieldVisualization.strokeColor = NSColor.greenColor()
-            self.userInteractionEnabled = true
+            if(allowMoving){
+                self.userInteractionEnabled = true
+            }
         }
     }
     

@@ -31,7 +31,8 @@ import Foundation
 
 class DragNode : FieldNode{
     var fieldVisualization:SKShapeNode;
-    private var allowEditing:Bool;
+    var allowEditing:Bool;
+    var allowMoving:Bool;
     
     init(size: CGSize, allowEditing:Bool) {
         
@@ -39,6 +40,7 @@ class DragNode : FieldNode{
         self.fieldVisualization.position.x += size.width/2
         self.fieldVisualization.position.y += size.height/2
         self.allowEditing = allowEditing
+        self.allowMoving = allowEditing;
         super.init();
         fieldVisualization.strokeColor = NSColor.clearColor()
         let fieldNode = SKFieldNode.dragField()
@@ -54,14 +56,16 @@ class DragNode : FieldNode{
         addChild(fieldVisualization)
     }
     
-    required override init!(coder aDecoder: NSCoder!) {
+    required override init!(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func makeEditable() {
         if(allowEditing){
             fieldVisualization.strokeColor = NSColor.greenColor()
-            self.userInteractionEnabled = true
+            if(allowMoving){
+                self.userInteractionEnabled = true
+            }
         }
     }
     
