@@ -10,6 +10,10 @@ import SpriteKit
 
 class FieldNode : SKNode{
     
+    var allowEditing:Bool;
+    var allowMoving:Bool;
+    var fieldVisualization:SKShapeNode?;
+    
     class func createNode(size:CGSize, fieldType:FieldTypes) -> FieldNode{
         
         switch(fieldType){
@@ -23,13 +27,28 @@ class FieldNode : SKNode{
             fatalError("Unrecognized fieldType")
         }
     }
+    init(size: CGSize, allowEditing:Bool){
+        self.allowEditing = allowEditing
+        self.allowMoving = allowEditing;
+        super.init();
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func makeEditable(){
-        fatalError("Needs to be implemented in subclass")
+        if(allowEditing){
+            fieldVisualization?.strokeColor = NSColor.greenColor()
+            if(allowMoving){
+                self.userInteractionEnabled = true
+            }
+        }
     }
     
     func removeEditable(){
-        fatalError("Needs to be implemented in subclass")
+        self.userInteractionEnabled = false
+        fieldVisualization?.strokeColor = NSColor.clearColor()
     }
     
     override func mouseDragged(theEvent: NSEvent) {

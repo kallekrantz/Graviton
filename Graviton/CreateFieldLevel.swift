@@ -14,7 +14,7 @@ class CreateFieldLevel : Level{
         let maxX = frame.maxX;
 
         let label = NORLabelNode(fontNamed: "Helvetica")
-        let action = AnimatableText.animateText(3, text: " We don't seem to have any fields.. Maybe you can fix that! \n Just ONE, 2, 3 and DRAG! ", label: label)
+        let action = AnimatableText.animateText(3, text: "We don't seem to have any fields.. Maybe you can fix that! \n Just click and drag the area! ", label: label)
         label.position = CGPointMake(maxX/2, maxY/2)
         label.runAction(action);
         

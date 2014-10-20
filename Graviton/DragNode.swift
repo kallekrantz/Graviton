@@ -30,39 +30,32 @@ import Foundation
 import Foundation
 
 class DragNode : FieldNode{
-    var fieldVisualization:SKShapeNode;
-    var allowEditing:Bool;
-    var allowMoving:Bool;
-    
-    init(size: CGSize, allowEditing:Bool) {
-        
-        self.fieldVisualization = SKShapeNode(rectOfSize: size);
-        self.fieldVisualization.position.x += size.width/2
-        self.fieldVisualization.position.y += size.height/2
-        self.allowEditing = allowEditing
-        self.allowMoving = allowEditing;
-        super.init();
-        fieldVisualization.strokeColor = NSColor.clearColor()
+    override init(size: CGSize, allowEditing:Bool) {
+        super.init(size: size, allowEditing: allowEditing);
+        fieldVisualization = SKShapeNode(rectOfSize: size);
+        fieldVisualization!.position.x += size.width/2
+        fieldVisualization!.position.y += size.height/2
+        fieldVisualization!.strokeColor = NSColor.clearColor()
         let fieldNode = SKFieldNode.dragField()
         fieldNode.region = SKRegion(size: size)
         fieldNode.strength = 5
         fieldNode.name = "fieldNode"
         
-        fieldVisualization.addChild(fieldNode)
+        fieldVisualization!.addChild(fieldNode)
         
-        fieldVisualization.fillColor = NSColor.redColor()
-        fieldVisualization.name = "fieldVisualization"
-        fieldVisualization.fillShader = SKShader(fileNamed: "dragShader.fsh")
-        addChild(fieldVisualization)
+        fieldVisualization!.fillColor = NSColor.redColor()
+        fieldVisualization!.name = "fieldVisualization"
+        fieldVisualization!.fillShader = SKShader(fileNamed: "dragShader.fsh")
+        addChild(fieldVisualization!)
     }
     
-    required override init!(coder aDecoder: NSCoder) {
+    required  init!(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func makeEditable() {
         if(allowEditing){
-            fieldVisualization.strokeColor = NSColor.greenColor()
+            fieldVisualization!.strokeColor = NSColor.greenColor()
             if(allowMoving){
                 self.userInteractionEnabled = true
             }
@@ -71,7 +64,7 @@ class DragNode : FieldNode{
     
     override func removeEditable() {
         self.userInteractionEnabled = false
-        fieldVisualization.strokeColor = NSColor.clearColor()
+        fieldVisualization!.strokeColor = NSColor.clearColor()
 
     }
 }

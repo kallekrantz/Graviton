@@ -9,45 +9,31 @@
 import Foundation
 
 class RadialGravityNode : FieldNode{
-    var fieldVisualization:SKShapeNode;
-    var allowEditing:Bool;
-    var allowMoving:Bool;
-    init(size: CGSize, allowEditing:Bool) {
-        let length = CGVector(dx: size.width, dy: size.height).length()/2
-        self.allowEditing = allowEditing
-        self.allowMoving = allowEditing;
-        self.fieldVisualization = SKShapeNode(circleOfRadius: length);
-        self.fieldVisualization.position.x += size.width/2
-        self.fieldVisualization.position.y += size.height/2
-        fieldVisualization.strokeColor = NSColor.clearColor()
-        super.init();
+    override init(size: CGSize, allowEditing:Bool) {
+        super.init(size: size, allowEditing: allowEditing)
         
-        fieldVisualization.lineWidth = 8;
-        fieldVisualization.fillShader = SKShader(fileNamed: "repulsorShader")
+        let radius = CGVector(dx: size.width, dy: size.height).length()/2
+        self.fieldVisualization = SKShapeNode(circleOfRadius: radius);
+        
+        fieldVisualization!.strokeColor = NSColor.clearColor()
+        self.fieldVisualization!.position.x += size.width/2
+        self.fieldVisualization!.position.y += size.height/2
+        fieldVisualization!.lineWidth = 8;
+        fieldVisualization!.fillShader = SKShader(fileNamed: "repulsorShader")
         let fieldNode = SKFieldNode.radialGravityField()
-        fieldNode.region = SKRegion(radius: Float(length))
+        fieldNode.region = SKRegion(radius: Float(radius))
         fieldNode.strength = -20
         fieldNode.name = "fieldNode"
         
-        fieldVisualization.addChild(fieldNode)
+        fieldVisualization!.addChild(fieldNode)
         
-        fieldVisualization.fillColor = NSColor.redColor()
-        fieldVisualization.fillColor = NSColor.yellowColor()
-        fieldVisualization.name = "fieldVisualization"
-        addChild(fieldVisualization)
+        fieldVisualization!.fillColor = NSColor.redColor()
+        fieldVisualization!.fillColor = NSColor.yellowColor()
+        fieldVisualization!.name = "fieldVisualization"
+        addChild(fieldVisualization!)
     }
-    
-    override func makeEditable() {
-        if(allowEditing){
-            fieldVisualization.strokeColor = NSColor.greenColor()
-            if(allowMoving){
-                self.userInteractionEnabled = true
-            }
-        }
-    }
-    
-    override func removeEditable() {
-        self.userInteractionEnabled = false
-        fieldVisualization.strokeColor = NSColor.clearColor()
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
