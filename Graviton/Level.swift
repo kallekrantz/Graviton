@@ -26,13 +26,30 @@ func createWalls(frame:CGRect) -> [SKNode]{
     let groundSize = CGSizeMake(maxX, 20)
     
     var leftWall =  SKShapeNode.createBox(CGPointMake(0,0), size: wallSize)
+    leftWall.fillTexture = SKTexture(imageNamed: "rustTexture")
     var rightWall = SKShapeNode.createBox(CGPointMake(maxX-20,0), size: wallSize)
+    rightWall.fillTexture = SKTexture(imageNamed: "rustTexture")
     var ground = SKShapeNode.createBox(CGPointMake(0, maxY-20), size: groundSize)
+    ground.fillTexture = SKTexture(imageNamed: "rustTexture")
     var roof = SKShapeNode.createBox(CGPointMake(0,0), size: groundSize)
+    roof.fillTexture = SKTexture(imageNamed: "rustTexture")
+
     
     leftWall.physicsBody?.dynamic = false;
     rightWall.physicsBody?.dynamic = false;
     ground.physicsBody?.dynamic = false;
     roof.physicsBody?.dynamic = false;
     return [leftWall, rightWall, ground, roof];
+}
+
+func createVictorySquare(size:CGSize) -> SKSpriteNode{
+    let victorySquare = SKSpriteNode(imageNamed: "pipe")
+    victorySquare.size = size;
+    return victorySquare
+}
+
+func createPlayerBox(size:CGSize) -> SKSpriteNode{
+    let playerBox = SKSpriteNode(imageNamed: "supplybox")
+    playerBox.size = size;
+    return playerBox;
 }

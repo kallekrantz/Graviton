@@ -30,20 +30,19 @@ class GravityLevel : Level{
     }
     func createStart(frame:CGRect) -> SKNode{
         let startPosition = CGPoint(x: 2*frame.maxX/3, y: 4*frame.maxY/5)
-        let node = SKShapeNode(rectOfSize: CGSizeMake(100, 100))
-        node.position = startPosition
-        node.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(100, 100));
-        node.fillColor = NSColor.greenColor()
-        node.physicsBody?.dynamic = false;
-        playerBox = node;
-        return node;
+        let size = CGSizeMake(100, 100);
+        let playerBox = createPlayerBox(size)
+        playerBox.position = startPosition
+        playerBox.physicsBody = SKPhysicsBody(rectangleOfSize: size);
+        playerBox.physicsBody?.dynamic = false;
+        self.playerBox = playerBox;
+        return playerBox;
     }
     func createFinish(frame:CGRect) -> SKNode{
-        let victorySquare = SKShapeNode(rectOfSize: CGSizeMake(frame.maxX/5, frame.maxY/5))
+        let size = CGSizeMake(frame.maxX/5, frame.maxY/5);
+        let victorySquare = createVictorySquare(size);
         victorySquare.position.x = 2*frame.maxX/3
         victorySquare.position.y = frame.maxY/5
-        victorySquare.fillColor = NSColor.blueColor()
-        victorySquare.alpha = 0.4
         return victorySquare
     }
     

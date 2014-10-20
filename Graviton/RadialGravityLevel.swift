@@ -29,21 +29,19 @@ class RadialGravityLevel : Level{
     }
     func createStart(frame:CGRect) -> SKNode{
         let startPosition = CGPoint(x: frame.maxX/6, y: frame.maxY/5)
-        let node = SKShapeNode(rectOfSize: CGSizeMake(100, 100))
+        let size = CGSizeMake(100, 100)
+        let node = createPlayerBox(size)
         node.position = startPosition
-        node.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(100, 100));
-        node.fillColor = NSColor.greenColor()
+        node.physicsBody = SKPhysicsBody(rectangleOfSize: size);
         playerBox = node;
         node.physicsBody?.dynamic = false;
         return node;
     }
     func createFinish(frame:CGRect) -> SKNode{
-        let victorySquare = SKShapeNode(rectOfSize: CGSizeMake(frame.maxX/5, frame.maxY/5))
+        let size = CGSizeMake(frame.maxX/5, frame.maxY/5)
+        let victorySquare = createVictorySquare(size)
         victorySquare.position.x = frame.maxX/2
         victorySquare.position.y = 4*frame.maxY/5
-        victorySquare.fillColor = NSColor.blueColor()
-        victorySquare.alpha = 0.4
-        
         return victorySquare
     }
     

@@ -31,22 +31,21 @@ class SpringLevel : Level{
     }
     func createStart(frame:CGRect) -> SKNode{
         let startPosition = CGPoint(x: frame.maxX/5, y: frame.maxY/2)
-        let node = SKShapeNode(rectOfSize: CGSizeMake(100, 100))
+        let size = CGSizeMake(100, 100);
+        let node = createPlayerBox(size)
         node.position = startPosition
-        node.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(100, 100));
-        node.fillColor = NSColor.greenColor()
-        playerBox = node;
+        node.physicsBody = SKPhysicsBody(rectangleOfSize: size);
         node.physicsBody?.dynamic = false;
 
+        self.playerBox = node;
 
         return node;
     }
     func createFinish(frame:CGRect) -> SKNode{
-        let victorySquare = SKShapeNode(rectOfSize: CGSizeMake(frame.maxX/5, frame.maxY/5))
+        let size = CGSizeMake(frame.maxX/5, frame.maxY/5);
+        let victorySquare = createVictorySquare(size);
         victorySquare.position.x = 4*frame.maxX/5
         victorySquare.position.y = frame.maxY/2
-        victorySquare.fillColor = NSColor.blueColor()
-        victorySquare.alpha = 0.4
         return victorySquare
     }
     
