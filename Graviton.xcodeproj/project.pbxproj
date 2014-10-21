@@ -12,6 +12,13 @@
 		B805D57019E18F0600E6DFC9 /* GravityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B805D56F19E18F0600E6DFC9 /* GravityLevel.swift */; };
 		B805D57219E190CA00E6DFC9 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B805D57119E190CA00E6DFC9 /* LevelManager.swift */; };
 		B805D57419E1924C00E6DFC9 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B805D57319E1924C00E6DFC9 /* GameManager.swift */; };
+		B807394F19F507F30020C796 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B807394E19F507F30020C796 /* HUD.swift */; };
+		B807395119F511A70020C796 /* hoverShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B807395019F511A70020C796 /* hoverShader.fsh */; };
+		B807395319F53CE30020C796 /* RadialGravityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B807395219F53CE30020C796 /* RadialGravityLevel.swift */; };
+		B820710D19F64C82009AE65D /* DirectionalGravityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B820710C19F64C82009AE65D /* DirectionalGravityLevel.swift */; };
+		B820710F19F64D93009AE65D /* DirectionalGravityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B820710E19F64D93009AE65D /* DirectionalGravityNode.swift */; };
+		B8373D0819F6C71B002761F0 /* LabyrinthLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8373D0719F6C71B002761F0 /* LabyrinthLevel.swift */; };
+		B8373D0A19F6CA02002761F0 /* CreditLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8373D0919F6CA02002761F0 /* CreditLevel.swift */; };
 		B83A4C2B19E03BC0008E7BBD /* RadialGravityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A4C2A19E03BC0008E7BBD /* RadialGravityNode.swift */; };
 		B83A4C2D19E0477C008E7BBD /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A4C2C19E0477C008E7BBD /* SpringNode.swift */; };
 		B83A4C2F19E04831008E7BBD /* DragNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A4C2E19E04831008E7BBD /* DragNode.swift */; };
@@ -62,6 +69,13 @@
 		B805D56F19E18F0600E6DFC9 /* GravityLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityLevel.swift; sourceTree = "<group>"; };
 		B805D57119E190CA00E6DFC9 /* LevelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		B805D57319E1924C00E6DFC9 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		B807394E19F507F30020C796 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		B807395019F511A70020C796 /* hoverShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = hoverShader.fsh; sourceTree = "<group>"; };
+		B807395219F53CE30020C796 /* RadialGravityLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGravityLevel.swift; sourceTree = "<group>"; };
+		B820710C19F64C82009AE65D /* DirectionalGravityLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionalGravityLevel.swift; sourceTree = "<group>"; };
+		B820710E19F64D93009AE65D /* DirectionalGravityNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionalGravityNode.swift; sourceTree = "<group>"; };
+		B8373D0719F6C71B002761F0 /* LabyrinthLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabyrinthLevel.swift; sourceTree = "<group>"; };
+		B8373D0919F6CA02002761F0 /* CreditLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditLevel.swift; sourceTree = "<group>"; };
 		B83A4C2A19E03BC0008E7BBD /* RadialGravityNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGravityNode.swift; sourceTree = "<group>"; };
 		B83A4C2C19E0477C008E7BBD /* SpringNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
 		B83A4C2E19E04831008E7BBD /* DragNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragNode.swift; sourceTree = "<group>"; };
@@ -124,12 +138,16 @@
 		B805D56E19E18EF900E6DFC9 /* MainLevels */ = {
 			isa = PBXGroup;
 			children = (
+				B8BCE2B119EBE92F002E3F61 /* IntroLevel.swift */,
 				B805D56F19E18F0600E6DFC9 /* GravityLevel.swift */,
 				B8BCF67D19E1E2E4004625A4 /* SpringLevel.swift */,
+				B8BFBD8F19ED782C00A9126C /* RemoveFieldLevel.swift */,
 				B8BCF67F19E1EC5A004625A4 /* LearnDragLevel.swift */,
 				B8BEE83119E4715500F0FDA3 /* CreateFieldLevel.swift */,
-				B8BCE2B119EBE92F002E3F61 /* IntroLevel.swift */,
-				B8BFBD8F19ED782C00A9126C /* RemoveFieldLevel.swift */,
+				B807395219F53CE30020C796 /* RadialGravityLevel.swift */,
+				B820710C19F64C82009AE65D /* DirectionalGravityLevel.swift */,
+				B8373D0719F6C71B002761F0 /* LabyrinthLevel.swift */,
+				B8373D0919F6CA02002761F0 /* CreditLevel.swift */,
 			);
 			name = MainLevels;
 			sourceTree = "<group>";
@@ -140,6 +158,7 @@
 				B83A4C2A19E03BC0008E7BBD /* RadialGravityNode.swift */,
 				B83A4C2C19E0477C008E7BBD /* SpringNode.swift */,
 				B83A4C2E19E04831008E7BBD /* DragNode.swift */,
+				B820710E19F64D93009AE65D /* DirectionalGravityNode.swift */,
 			);
 			name = FieldNodes;
 			sourceTree = "<group>";
@@ -150,6 +169,7 @@
 				B83A4C3319E0786D008E7BBD /* repulsorShader.fsh */,
 				B83A4C3519E14AD1008E7BBD /* springShader.fsh */,
 				B83A4C3719E153B2008E7BBD /* dragShader.fsh */,
+				B807395019F511A70020C796 /* hoverShader.fsh */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -213,6 +233,7 @@
 				B84F8D1819F4192A00880733 /* FieldNode.swift */,
 				B805D56A19E1721400E6DFC9 /* AnimatableText.swift */,
 				B8BCE2B319EBECBF002E3F61 /* ClickableTextNode.swift */,
+				B807394E19F507F30020C796 /* HUD.swift */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -363,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B807395119F511A70020C796 /* hoverShader.fsh in Resources */,
 				B83A4C3619E14AD1008E7BBD /* springShader.fsh in Resources */,
 				B8E025B819DA0ACC0058098F /* GameScene.sks in Resources */,
 				B8E025BA19DA0ACC0058098F /* Images.xcassets in Resources */,
@@ -393,28 +415,34 @@
 				B84F8D2519F4199B00880733 /* EventExtension.swift in Sources */,
 				B805D57419E1924C00E6DFC9 /* GameManager.swift in Sources */,
 				B805D57019E18F0600E6DFC9 /* GravityLevel.swift in Sources */,
+				B820710F19F64D93009AE65D /* DirectionalGravityNode.swift in Sources */,
 				B8830FD919DAEE9B003C338F /* SKNodeExtension.swift in Sources */,
 				B8BCF68019E1EC5A004625A4 /* LearnDragLevel.swift in Sources */,
 				B84F8D1D19F4195000880733 /* CGPointExtension.swift in Sources */,
+				B8373D0A19F6CA02002761F0 /* CreditLevel.swift in Sources */,
 				B8BCF67E19E1E2E4004625A4 /* SpringLevel.swift in Sources */,
 				B8E025B619DA0ACC0058098F /* GameScene.swift in Sources */,
 				B84F8D2319F4198A00880733 /* CharacterExtension.swift in Sources */,
 				B84F8D2A19F419C300880733 /* Enums.swift in Sources */,
 				B805D56B19E1721400E6DFC9 /* AnimatableText.swift in Sources */,
+				B820710D19F64C82009AE65D /* DirectionalGravityLevel.swift in Sources */,
 				B805D57219E190CA00E6DFC9 /* LevelManager.swift in Sources */,
 				B8BFBD9019ED782C00A9126C /* RemoveFieldLevel.swift in Sources */,
 				B8BEE83219E4715500F0FDA3 /* CreateFieldLevel.swift in Sources */,
+				B807394F19F507F30020C796 /* HUD.swift in Sources */,
 				B8BCF67C19E1C72B004625A4 /* NORLabelNode.m in Sources */,
 				B84F8D2119F4197B00880733 /* CGVectorExtensions.swift in Sources */,
 				B83A4C2F19E04831008E7BBD /* DragNode.swift in Sources */,
 				B8E025B419DA0ACC0058098F /* AppDelegate.swift in Sources */,
 				B8830FD119DAE1B0003C338F /* Level.swift in Sources */,
+				B8373D0819F6C71B002761F0 /* LabyrinthLevel.swift in Sources */,
 				B8BCE2B219EBE92F002E3F61 /* IntroLevel.swift in Sources */,
 				B84F8D1F19F4196000880733 /* SKShapeNodeExtension.swift in Sources */,
 				B84F8D2819F419B400880733 /* FieldWrapper.m in Sources */,
 				B8830FD719DAE7BD003C338F /* BasicTest.swift in Sources */,
 				B8BEE83019E46D2C00F0FDA3 /* FieldManager.swift in Sources */,
 				B84F8D1919F4192A00880733 /* FieldNode.swift in Sources */,
+				B807395319F53CE30020C796 /* RadialGravityLevel.swift in Sources */,
 				B805D56D19E17DE900E6DFC9 /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
